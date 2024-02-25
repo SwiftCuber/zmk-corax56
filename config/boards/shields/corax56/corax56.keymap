@@ -40,13 +40,13 @@
             label = "homerow_mods";
             #binding-cells = <2>;
             tapping-term-ms = <175>;
-            quick_tap_ms = <200>;
+            quick-tap-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
 
         hm_l: homerow_mods_left {
-            compatible = "zmk,behaviour-hold-tap";
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
 
@@ -60,7 +60,7 @@
         };
 
         hm_r: homerow_mods_right {
-            compatible = "zmk,behaviour-hold-tap";
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
 
@@ -74,7 +74,7 @@
         };
 
         hm_shift_l: hm_shift_l {
-            compatible = "zmk,behaviour-hold-tap";
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
 
@@ -84,7 +84,7 @@
             require-prior-idle-ms = <HM_PRIOR_IDLE>;
 
             hold-trigger-key-positions = <KEYS_R KEYS_T>;
-            hold-trigger-on-release;
+            /* hold-trigger-on-release; */
         };
 
         hm_shift_r: hm_shift_r {
@@ -98,7 +98,7 @@
             require-prior-idle-ms = <HM_PRIOR_IDLE>;
 
             hold-trigger-key-positions = <KEYS_L KEYS_T>;
-            hold-trigger-on-release;
+            /* hold-trigger-on-release; */
         };
         
         // Layers that are activated when holding a thumb row key
