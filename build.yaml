@@ -17,5 +17,5 @@ include:
     shield: corax56_left
   - board: nice_nano_v2
     shield: corax56_right
-    #- board: nice_nano_v2
-    #shield: settings_reset
+  - board: nice_nano_v2
+    shield: settings_reset
