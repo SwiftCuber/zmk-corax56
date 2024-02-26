@@ -131,12 +131,35 @@
         };
     };
 
-    keymap {
-        compatible = "zmk,keymap";
+    combos {
+      compatible = "zmk,combos";
 
-        default_layer {
-            label = "DEF";
-            bindings = <
+      combo_tab {
+        timeout-ms = = <COMBO_TIMEOUT>;
+        require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+        key-positions = <12 13>;
+        layers = <DEF>;
+        slow-release;
+        bindings = <&kp TAB>;
+      };
+
+      combo_return {
+        timeout-ms = = <COMBO_TIMEOUT>;
+        require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+        key-positions = <25 26>;
+        layers = <DEF>;
+        slow-release;
+        bindings = <&kp RET>;
+      };
+
+    };
+
+    keymap {
+      compatible = "zmk,keymap";
+
+      default_layer {
+        label = "DEF";
+        bindings = <
 //                             ┌──────────────┬───────────────┬──────────────┬───────────────┬─────────────┐                                   ┌──────────────┬───────────────┬──────────────┬───────────────┬─────────────────┐                        
 //                             │    &kp N1    │    &kp N2     │    &kp N3    │    &kp N4     │   &kp N5    │                                   │    &kp N6    │    &kp N7     │    &kp N8    │    &kp N9     │     &kp N0      │                        
 //               ┌─────────────┼──────────────┼───────────────┼──────────────┼───────────────┼─────────────┤                                   ├──────────────┼───────────────┼──────────────┼───────────────┼─────────────────┼───────────┐            
@@ -153,14 +176,14 @@
   &td_caps   &kp ESC       &hm_l LALT A   &hm_l LCTRL S   &hm_l LGUI D   &hm_l LSHFT F   &hm_l MEH G                                       &hm_r MEH H    &hm_r RSHFT J   &hm_r RGUI K   &hm_r RCTRL L   &hm_r RALT SEMI   &kp SQT     &kp EQUAL
              &key_repeat   &kp Z          &kp X           &kp C          &kp V           &kp B         &kp C_MUTE       &kp C_PLAY_PAUSE   &kp N          &kp M           &kp COMMA      &kp DOT         &kp FSLH          &kp BSLH             
                                                           &td_gaming     &kp ESC         &kp TAB       &trl NAV SPACE   &trl NUM BSPC      &trl SYM RET   &kp DEL         &none                                                                 
-            >;
+        >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_BRI_DN C_BRI_UP>;
-        };
+        sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_BRI_DN C_BRI_UP>;
+      };
 
     navigation_layer {
-            label = "NAV";
-            bindings = <
+      label = "NAV";
+      bindings = <
 //                                ┌───────────────┬──────────────┬──────────────┬──────────────┬──────────────┐                           ┌──────────────────┬──────────────┬───────────────┬───────────────────┬─────────────┐                                    
 //                                │ &bt BT_SEL 0  │ &bt BT_SEL 1 │ &bt BT_SEL 2 │ &bt BT_SEL 3 │ &bt BT_SEL 4 │                           │      &none       │    &none     │     &none     │       &none       │    &none    │                                    
 //                 ┌──────────────┼───────────────┼──────────────┼──────────────┼──────────────┼──────────────┤                           ├──────────────────┼──────────────┼───────────────┼───────────────────┼─────────────┼───────────────┐                    
@@ -183,7 +206,7 @@
         };
 
     number_layer {
-            label = "NUM";
+      label = "NUM";
       bindings = <
 //                    ┌───────────┬────────┬────────┬─────────┬───────────┐                ┌─────────┬────────────┬──────────┬───────────┬──────────┐                    
 //                    │  &kp F1   │ &kp F2 │ &kp F3 │ &kp F4  │  &kp F5   │                │ &kp F6  │   &kp F7   │  &kp F8  │  &kp F9   │ &kp F10  │                    
@@ -227,12 +250,12 @@
                                          &none      &kp ESC      &kp UNDER   &kp RPAR   &none   &none     &none      &none                                           
       >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_BRI_DN C_BRI_UP>;
-        };
+       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_BRI_DN C_BRI_UP>;
+     };
 
-      gaming_layer {
-        label = "GAM";
-        bindings = <
+     gaming_layer {
+       label = "GAM";
+       bindings = <
 //                            ┌────────┬────────┬────────────┬──────────────┬──────────┐                           ┌──────────────┬─────────┬───────────┬─────────┬──────────┐                        
 //                            │ &kp N1 │ &kp N2 │   &kp N3   │    &kp N4    │  &kp N5  │                           │    &kp N6    │ &kp N7  │  &kp N8   │ &kp N9  │  &kp N0  │                        
 //                ┌───────────┼────────┼────────┼────────────┼──────────────┼──────────┤                           ├──────────────┼─────────┼───────────┼─────────┼──────────┼───────────┐            
@@ -249,10 +272,10 @@
   &kp GRAVE   &kp LSHFT   &kp A    &kp S    &kp D        &kp F          &kp G                                  &kp H          &kp J     &kp K       &kp L     &kp SEMI   &kp SQT     &kp EQUAL
               &kp LCTRL   &kp Z    &kp X    &kp C        &kp V          &kp B      &kp RET     &none           &kp N          &kp M     &kp COMMA   &kp DOT   &kp FSLH   &kp BSLH             
                                             &td_gaming   &hm LALT ESC   &kp LGUI   &kp SPACE   &trl NUM BSPC   &trl SYM RET   &kp DEL   &none                                                 
-        >;
+       >;
 
-        sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_BRI_DN C_BRI_UP>;
-      };
+       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_BRI_DN C_BRI_UP>;
+     };
 
-    };
+   };
 };
