@@ -135,7 +135,7 @@
       compatible = "zmk,combos";
 
       combo_tab {
-        timeout-ms = = <COMBO_TIMEOUT>;
+        timeout-ms = <COMBO_TIMEOUT>;
         require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
         key-positions = <12 13>;
         layers = <DEF>;
