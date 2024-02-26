@@ -145,7 +145,7 @@
       };
 
       combo_return {
-        timeout-ms = = <COMBO_TIMEOUT>;
+        timeout-ms = <COMBO_TIMEOUT>;
         require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
         key-positions = <25 26>;
         layers = <DEF>;
