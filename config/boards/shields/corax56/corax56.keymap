@@ -194,6 +194,41 @@
       bindings = <&kp RBKT>;
     };
 
+    // Simultaneous q + e : Type ä
+    combo_adiacritic {
+      timeout-ms = <COMBO_TIMEOUT>;
+      require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+      key-positions = <11 24>;
+      layers = <DEF>;
+      bindings = <&kp RALT(A)>;
+    };
+
+    // Simultaneous w + s : Type ß
+    combo_eszett {
+      timeout-ms = <COMBO_TIMEOUT>;
+      require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+      key-positions = <12 25>;
+      layers = <DEF>;
+      bindings = <&kp RALT(S)>;
+    };
+
+    // Simultaneous u + j : Type ü
+    combo_udiacritic {
+      timeout-ms = <COMBO_TIMEOUT>;
+      require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+      key-positions = <17 30>;
+      layers = <DEF>;
+      bindings = <&kp RALT(U)>;
+    };
+
+    // Simultaneous o + l : Type ö
+    combo_odiacritic {
+      timeout-ms = <COMBO_TIMEOUT>;
+      require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+      key-positions = <19 32>;
+      layers = <DEF>;
+      bindings = <&kp RALT(O)>;
+    };
   };
 
   keymap {
