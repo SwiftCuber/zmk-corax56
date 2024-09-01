@@ -200,7 +200,7 @@
       require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
       key-positions = <11 24>;
       layers = <DEF>;
-      bindings = <&kp RA(Q)>;
+      bindings = <&kp RA(A)>;
     };
 
     // Simultaneous w + s : Type ß
@@ -218,7 +218,7 @@
       require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
       key-positions = <17 30>;
       layers = <DEF>;
-      bindings = <&kp RA(Y)>;
+      bindings = <&kp RA(U)>;
     };
 
     // Simultaneous o + l : Type ö
@@ -227,7 +227,7 @@
       require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
       key-positions = <19 32>;
       layers = <DEF>;
-      bindings = <&kp RA(P)>;
+      bindings = <&kp RA(O)>;
     };
   };
 
