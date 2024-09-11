@@ -268,15 +268,15 @@
 //    ┌────────┼────────────┼───────────────┼──────────┼──────────┼──────────┼──────────┤             ├──────────────────┼────────────┼────────────┼──────────────────┼─────┼────────────┼───────────┐
 //    │ bt_clr │            │     lalt      │   lctl   │   lgui   │   lsft   │   MEH    │             │       left       │    down    │     up     │       rght       │     │            │ epwr_ tog │
 //    └────────┼────────────┼───────────────┼──────────┼──────────┼──────────┼──────────┼──────┬──────┼──────────────────┼────────────┼────────────┼──────────────────┼─────┼────────────┼───────────┘
-//             │  out_ tog  │     bspc      │   esc    │   tab    │   spc    │   ent    │ boot │ boot │ lsft(lalt(left)) │ lalt(left) │ lalt(rght) │ lsft(lalt(rght)) │ pwr │ term_lock  │            
+//             │  out_ tog  │     bspc      │   esc    │   tab    │   spc    │   ent    │ boot │ boot │ lsft(lalt(left)) │ lalt(left) │ lalt(rght) │ lsft(lalt(rght)) │     │ term_lock  │            
 //             └────────────┴───────────────┴──────────┼──────────┼──────────┼──────────┼──────┼──────┼──────────────────┼────────────┼────────────┼──────────────────┴─────┴────────────┘            
 //                                                     │          │          │          │      │ bspc │       ent        │    del     │            │                                                  
 //                                                     └──────────┴──────────┴──────────┴──────┴──────┴──────────────────┴────────────┴────────────┘                                                  
-                              &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                               &none              &none          &none           &none               &none                                          
-               &sys_reset     &kp LG(LS(Z))   &kp LG(X)      &kp LG(C)      &kp LG(V)      &kp LG(Z)                                  &kp PG_DN          &kp HOME       &kp END         &kp PG_UP           &none         &sys_reset                       
-  &bt BT_CLR   &none          &kp LALT        &kp LCTRL      &kp LGUI       &kp LSHFT      &kp MEH                                    &kp LEFT           &kp DOWN       &kp UP          &kp RIGHT           &none         &none           &ext_power EP_TOG
-               &out OUT_TOG   &kp BSPC        &kp ESC        &kp TAB        &kp SPACE      &kp RET        &bootloader   &bootloader   &kp LS(LA(LEFT))   &kp LA(LEFT)   &kp LA(RIGHT)   &kp LS(LA(RIGHT))   &kp C_POWER   &kp C_AL_LOCK                    
-                                                             &none          &none          &none          &none         &kp BSPC      &kp RET            &kp DEL        &none                                                                              
+                              &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                               &none              &none          &none           &none               &none                                    
+               &sys_reset     &kp LG(LS(Z))   &kp LG(X)      &kp LG(C)      &kp LG(V)      &kp LG(Z)                                  &kp PG_DN          &kp HOME       &kp END         &kp PG_UP           &none   &sys_reset                       
+  &bt BT_CLR   &none          &kp LALT        &kp LCTRL      &kp LGUI       &kp LSHFT      &kp MEH                                    &kp LEFT           &kp DOWN       &kp UP          &kp RIGHT           &none   &none           &ext_power EP_TOG
+               &out OUT_TOG   &kp BSPC        &kp ESC        &kp TAB        &kp SPACE      &kp RET        &bootloader   &bootloader   &kp LS(LA(LEFT))   &kp LA(LEFT)   &kp LA(RIGHT)   &kp LS(LA(RIGHT))   &none   &kp C_AL_LOCK                    
+                                                             &none          &none          &none          &none         &kp BSPC      &kp RET            &kp DEL        &none                                                                        
       >;
 
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
